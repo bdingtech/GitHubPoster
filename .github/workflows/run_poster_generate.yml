@@ -103,7 +103,7 @@ jobs:
       - name: Run sync notion script
         if: contains(env.TYPE, 'notion')
         run: |
-          python3 -m github_poster notion --notion_token "${{ secrets.NOTION_TOKEN }}" --database_id "${{ secrets.NOTION_DATABASE_ID }}" --prop_name "${{ secrets.NOTION_PROP_NAME }}" --me ${{ env.ME }}
+          python3 -m github_poster notion --notion_token "${{ secrets.NOTION_TOKEN }}" --database_id "${{ secrets.NOTION_DATABASE_ID }}" --prop_name "${{ secrets.NOTION_PROP_NAME }}" --me ${{ env.ME }} --without-type-name  --background-color='#FFFFFF' --track-color='#ACE7AE' --special-color1='#69C16E' --special-color2='#549F57' --text-color='#000000'
 
       - name: Run sync openlanguage script
         if: contains(env.TYPE, 'openlanguage')
